@@ -1,0 +1,105 @@
+/* Estilos Gerais */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Cor de fundo (slate-50) */
+}
+
+/* Classes de Gradiente da Marca */
+.brand-gradient {
+    background: linear-gradient(90deg, #05c76c, #01ab5b);
+}
+
+/* Estilos para o espaço entre seções no main */
+main#app-wrapper > section + hr,
+main#app-wrapper > hr + section {
+    margin-top: 3rem; /* Equivalente a space-y-12 do Tailwind */
+    margin-bottom: 3rem;
+}
+
+/* Estilo para a barra de scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Estilos de hover para os cards no dashboard */
+.hover-scale:hover {
+    transform: translateY(-0.3rem); /* Equivalente a hover:-translate-y-1.5 */
+    transition: all 0.3s ease; /* Equivalente a transition-all duration-300 */
+}
+
+/* Estilo de hover para os inputs */
+.form-control:focus, .input-group-text {
+    border-color: #05c76c !important; /* Cor de foco verde, equivalente a focus:ring-emerald-500 */
+    box-shadow: 0 0 0 0.25rem rgba(5, 199, 108, 0.25); /* Sombra de foco */
+}
+
+/* Estilo de hover para os cards de investimento */
+.hover-border-success:hover {
+    border-color: #6ee7b7 !important; /* Equivalente a hover:border-emerald-300 */
+}
+
+.hover-border-warning:hover {
+    border-color: #fcd34d !important; /* Equivalente a hover:border-amber-300 */
+}
+
+.hover-border-danger:hover {
+    border-color: #fca5a5 !important; /* Equivalente a hover:border-red-300 */
+}
+
+/* Estilo de hover para os links de serviço */
+.hover-bg-light-subtle:hover {
+    background-color: #e2e8f0 !important; /* Equivalente a hover:bg-slate-100 */
+}
+
+/* Estilo para o botão de confirmação de transferência */
+.btn.brand-gradient {
+    box-shadow: none; /* Remove a sombra padrão do botão */
+}
+
+.btn.brand-gradient:hover {
+    box-shadow: 0 10px 15px -3px rgba(5, 199, 108, 0.3), 0 4px 6px -2px rgba(5, 199, 108, 0.2) !important; /* Equivalente a hover:shadow-lg hover:shadow-emerald-500/30 */
+    transform: translateY(-0.125rem); /* Equivalente a hover:-translate-y-0.5 */
+    transition: all 0.3s ease;
+}
+
+/* Ajustes de espaçamento para as listas de transações/serviços */
+.space-y-5 > div, .space-y-4 > div, .space-y-4 > a {
+    margin-top: 1.25rem; /* Ajusta o espaçamento vertical entre os itens */
+}
+
+.space-y-5 > div:first-child, .space-y-4 > div:first-child, .space-y-4 > a:first-child {
+    margin-top: 0;
+}
+
+/* Ajuste para o padding do body quando scroll-behavior smooth está ativo */
+body {
+    padding-top: 0; /* Bootstrap pode adicionar um padding-top devido à barra de navegação fixa, ajustamos aqui se necessário */
+}
+
+/* Largura máxima para o main container (mx-auto max-w-3xl) */
+.container.mx-auto.max-w-3xl {
+    max-width: 768px; /* Equivalente a max-w-3xl (32rem * 16px/rem = 512px; 48rem * 16px/rem = 768px, usando uma escala comum do tailwind) */
+}
+
+/* Largura máxima para o header container (mx-auto max-w-4xl) */
+.container.mx-auto.max-w-4xl {
+    max-width: 1024px; /* Equivalente a max-w-4xl */
+}
